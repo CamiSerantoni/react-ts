@@ -30,10 +30,10 @@ export default function App() {
       <button onClick={handleAddGoal}>Add Goal </button>
       <ul>
         {goals.map((goal) => (
-          <li>
-            <CourseGoal key={goal.id} title={goal.title}>
+          <li key={goal.id} >
+            <CourseGoal title={goal.title}>
               {" "}
-              <p>learn it from the ground up</p>
+              <p>{goal.description}</p>
             </CourseGoal>
           </li>
         ))}
