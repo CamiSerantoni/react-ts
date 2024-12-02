@@ -39,9 +39,6 @@ export default function App() {
         ))}
       </ul>
 
-      <CourseGoal title="Learn React + TS">
-        Learn it from the ground up
-      </CourseGoal>
     </main>
   );
 }
