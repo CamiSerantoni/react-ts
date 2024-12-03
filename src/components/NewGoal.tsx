@@ -1,7 +1,9 @@
+import { FormEvent } from "react"
+
 export default function NewGoal() {
 
-function  handleSubmit () {
-
+function  handleSubmit (event: FormEvent) {
+    event.preventDefault()
 }
 
 
