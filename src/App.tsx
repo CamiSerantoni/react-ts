@@ -16,12 +16,12 @@ export default function App() {
  
  
  
-  function handleAddGoal() {
+  function handleAddGoal(goal: string, summary: string) {
     setGoals((prevGoals) => {
       const newGoal: CourseGoal = {
         id: Math.random(),
-        title: "learn React + TS",
-        description: "Learn it from the ground up",
+        title:goal,
+        description: summary,
       };
       return [...prevGoals, newGoal];
     });
@@ -40,7 +40,7 @@ export default function App() {
       <Header image={{ src: GoalsImg, alt: "Goals" }}>
         <h1>Course Goals</h1>
       </Header>
-    <NewGoal/>
+    <NewGoal onAddGoal={handleAddGoal}/>
 
      <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal}/>
 
